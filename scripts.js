@@ -73,7 +73,7 @@ function comprarPorWhatsApp() {
   mensaje += `%0ATotal a pagar: S/. ${total.toFixed(2)}`;
 
   const numero = "51901340173";
-  const url = `https://wa.me/${numero}?text=${mensaje}`;
+  const url = `https://web.whatsapp.com/send?phone=${numero}?text=${mensaje}`;
   window.open(url, "_blank");
 }
 
