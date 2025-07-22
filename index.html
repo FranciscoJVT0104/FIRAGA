@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIRAGA</title>
+  <link rel="stylesheet" href="..\style.css" />
+  <!-- Font Awesome vía CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" href="..\IMG\BLANCO.PNG" type="image/x-icon">
+
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>FIRAGA</h1>
+    <nav>
+      <a href="#productos"><i class="fa-solid fa-basket-shopping"></i> Productos</a>
+      <a href="#carrito"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+      <a href="#contacto"><i class="fa-solid fa-address-book"></i> Contacto</a>
+    </nav>
+  </header>
+
+  <!-- BANNER PRINCIPAL -->
+  <section class="banner">
+    Bienvenido a nuestra tienda
+  </section>
+
+  <!-- SECCIÓN DOBLE: RESEÑA + IMAGEN -->
+<section class="resena">
+  <div class="resena-texto">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      FIRAGA SAC., se dedica a la producción de pastas, esta empresa posee un establecimiento industrial
+ubicado en distrito de San Luis donde mantienen las operaciones de producción, ventas y distribución de
+sus productos, la planta produce fideos cortos y largos, para esto contamos con equipos e
+infraestructura adecuada que cumple con la normativa sanitaria.
+<br>
+FIRAGA S.A.C. presenta el plan HACCP documentado para la línea de fideos como plataforma para
+la implementación del sistema HACCP, con el fin de asegurar la calidad sanitaria y la inocuidad del
+alimento, para ello, la empresa evalúa periódicamente las necesidades del recurso humano,
+infraestructura y cambios tecnológicos necesarios para el desarrollo óptimo de sus actividades.
+    </p>
+  </div>
+  <div class="resena-imagen">
+    <img src="..\IMG\ROJO.PNG" alt="Cliente satisfecho">
+  </div>
+</section>
+
+
+   <!-- CARRUSEL DE FOTOS -->
+<section class="carrusel" style="display: flex; justify-content: center;">
+  <div class="carrusel-contenedor">
+    <img class="carrusel-imagen activa" src="..\IMG\1.jpeg">
+    <img class="carrusel-imagen" src="..\IMG\2.jpeg">
+    <img class="carrusel-imagen" src="..\IMG\3.jpeg">
+    <img class="carrusel-imagen" src="..\IMG\4.jpeg">
+    <img class="carrusel-imagen" src="..\IMG\5.jpeg">
+    <button class="carrusel-btn izquierda" onclick="moverCarrusel(-1)">❮</button>
+    <button class="carrusel-btn derecha" onclick="moverCarrusel(1)">❯</button>
+  </div>
+</section>
+<section id="carrito" class="carrito">
+<h2>PRODUCTOS</h2>
+  <!-- SECCIÓN DE PRODUCTOS -->
+  <section id="productos" class="productos">
+    <div class="producto">
+      <img src="..\IMG\aros.jpg">
+      <h3>FIDEOS AROS 2Kg</h3>
+      <p>S/. 30.50</p>
+      <button onclick="agregarAlCarrito('FIDEOS AROS 2Kg', 30.50)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="..\IMG\codos.jpg">
+      <h3>FIDEOS CODOS 2Kg</h3>
+      <p>S/. 29.60</p>
+      <button onclick="agregarAlCarrito('FIDEOS CODOS 2Kg', 29.60)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="..\IMG\tubos.jpg">
+      <h3>FIDEOS TUBOS 2Kg</h3>
+      <p>S/. 32.70</p>
+      <button onclick="agregarAlCarrito('FIDEOS TUBOS 2Kg', 32.70)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="..\IMG\codo.jpg">
+      <h3>PAPÁ CODO 250gr</h3>
+      <p>S/. 2.50</p>
+      <button onclick="agregarAlCarrito('PAPÁ CODO 250gr', 2.50)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="..\IMG\conchita.jpg">
+      <h3>MAMÁ CONCHITA 250gr</h3>
+      <p>S/. 2.50</p>
+      <button onclick="agregarAlCarrito('MAMÁ CONCHITA 250gr', 2.50)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="..\IMG\tornillo.jpg">
+      <h3>CURLY TORNILLOS 250gr</h3>
+      <p>S/. 2.50</p>
+      <button onclick="agregarAlCarrito('CURLY TORNILLOS 250gr', 2.50)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="..\IMG\tubo.jpg">
+      <h3>GIOVANE TUBOS 250gr</h3>
+      <p>S/. 2.50</p>
+      <button onclick="agregarAlCarrito('GIOVANE TUBOS 250gr', 2.50)">Agregar al carrito</button>
+    </div>
+  </section>
+</section>
+
+  <!-- SECCIÓN DE CARRITO -->
+ <section id="carrito" class="carrito">
+  <h2>Carrito de Compras</h2>
+  <ul id="lista-carrito"></ul>
+  <p id="total">Total: S/. 0.00</p>
+  <div class="carrito-botones">
+    <button onclick="vaciarCarrito()"><i class="fa-solid fa-trash"></i> Vaciar carrito</button>
+    <button onclick="comprarPorWhatsApp()"><i class="fa-solid fa-cash-register"></i> COMPRAR</button>
+  </div>
+</section>
+
+
+  <section id="ubicacion" style="padding: 2rem; background-color: #f9f9f9;">
+  <h2 style="text-align: center;">Nuestra Ubicación</h2>
+  
+  <div style="text-align: center; margin-bottom: 1rem;">
+    <p><strong>Dirección:</strong> Av. Oscar R. Benavides 355, Urb. El Pino, San Luis, Lima</p>
+    <p><strong>Teléfono:</strong> +51 901 340 173</p>
+  </div>
+
+    <!-- UBICACION -->
+<iframe style="display: flex; justify-content: center;"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7425.332546189054!2d-76.99416167965065!3d-12.067027363519054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c638c4f70455%3A0xb6b656733d5cbaf2!2s%C3%93scar%20Ra%C3%BAl%20Benavides%20355%2C%20Lima%2015022!5e1!3m2!1ses-419!2spe!4v1753144034872!5m2!1ses-419!2spe"
+width="100%" 
+height="400" 
+style="border:0; max-width: 800px;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+  <!-- SECCIÓN DE CONTACTO -->
+<section id="contacto" class="contacto">
+  <h2>Contacto</h2>
+  <form onsubmit="enviarFormularioWhatsApp(event)">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="email">Correo:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+    <button type="submit"> <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp</button>
+  </form>
+</section>
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    &copy; 2025 FIRAGA Todos los derechos reservados.
+  </footer>
+
+  <script src="..\scripts.js"></script>
+</body>
+</html>

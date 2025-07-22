@@ -1,0 +1,236 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #ff0000;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.resena {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fffbe6;
+  margin: 2rem;
+  border-radius: 8px;
+  gap: 2rem;
+}
+
+.resena-texto {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.resena-texto h2 {
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.resena-texto p {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.resena-imagen {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.resena-imagen img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.banner {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.producto {
+  background: rgb(255, 242, 247);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.carrito, .contacto {
+  padding: 2rem;
+  background: white;
+  margin: 2rem;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #ff2222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.carrusel {
+  position: relative;
+  max-width: 25%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrusel-contenedor {
+  position: relative;
+}
+
+.carrusel-imagen {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carrusel-imagen.activa {
+  display: block;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.carrusel-btn.izquierda {
+  left: 0;
+}
+
+.carrusel-btn.derecha {
+  right: 0;
+}
+
+#productos button {
+   margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #0011ff;
+  margin-left: 1rem;
+}
+
+.producto button:hover,
+#productos button:hover {
+  opacity: 0.85;
+}
+
+
+.carrito-botones button,
+#lista-carrito button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #ff1900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#lista-carrito button {
+  background-color: #ff7700;
+  margin-left: 1rem;
+}
+
+.carrito-botones button:hover,
+#lista-carrito button:hover {
+  opacity: 0.85;
+}
+
+.carrito-botones button {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carrito-botones button:nth-child(2) {
+  background-color: rgb(0, 255, 0);
+  color: white;
+}
+
+.carrito-botones button:hover {
+  opacity: 0.9;
+}
+
+.contacto button {
+  background-color: #25D366;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contacto input{
+  width: 40%;
+  height: 30%;
+}
+
+.contacto textarea{
+  width: 40%;
+  height: 40%;
+}
+
+.contacto button:hover {
+  opacity: 0.9;
+}
